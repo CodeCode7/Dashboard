@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 	xmlns:u="sap.ui.unified"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
+
+	<Dialog title="Dialog from fragment" >
+	<beginButton>
+		 	<Button text="OK" press="DialogOK" />
+		</beginButton>
+		<content>
+			<u:Calendar
+					id="calendar"
+					select="handleCalendarSelect"
+					intervalSelection="true"
+					weekNumberSelect="handleWeekNumberSelect"/>
+		</content>
+		<endButton>
+		 	<Button text="Close" press="closeDialog" />
+		</endButton>
+	</Dialog>
+
+</core:FragmentDefinition>

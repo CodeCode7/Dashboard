@@ -1,0 +1,446 @@
+{
+	"column": {
+		"sap.app": {
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "Analytical",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"number": "6700",
+						"unit": "K",
+						"trend": "Up",
+						"state": "Success",
+						"target": {
+							"number": 100,
+							"unit": "K"
+						},
+						"deviation": {
+							"number": 34.7
+						},
+						"details": "Q1, 2018"
+					}
+				},
+				"title": "Active Users ",
+				"mainIndicator": {
+					"number": "{number}",
+					"state": "{state}",
+					"range": {
+						"Critical": [
+							0,
+							100
+						],
+						"Good": [
+							100,
+							1000
+						]
+					}
+				},
+				"details": "{details}"
+			
+			},
+			"content": {
+				"chartType": "Column",
+				"legend": {
+					"visible": true,
+					"position": "Bottom",
+					"alignment": "Left"
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": true
+					},
+					"categoryAxisText": {
+						"visible": true
+					},
+					"valueAxisText": {
+						"visible": true
+					}
+				},
+				"title": {
+					"text": "Count by period",
+					"visible": true,
+					"alignment": "Left"
+				},
+				"measureAxis": "valueAxis",
+				"dimensionAxis": "categoryAxis",
+				"data": {
+					"json": {
+						"list": [{
+								"Week": "CW14",
+								"ActiveUsers": 1000
+							},
+							{
+								"Week": "CW15",
+								"ActiveUsers": 2000
+							},
+							{
+								"Week": "CW16",
+								"ActiveUsers": 3000
+							},
+							{
+								"Week": "CW17",
+								"ActiveUsers": 4000
+							},
+							{
+								"Week": "CW18",
+								"ActiveUsers": 5000
+							},
+							{
+								"Week": "CW19",
+								"ActiveUsers": 6000
+							},
+							{
+								"Week": "CW20",
+								"ActiveUsers": 7000
+							}
+						]
+					},
+					"path": "/list"
+				},
+				"dimensions": [{
+					"label": "Weeks",
+					"value": "{Week}"
+				}],
+				"measures": [{
+						"label": "ActiveUsers",
+						"value": "{ActiveUsers}"
+					}
+				]
+			}
+		}
+	},
+		"donut1": {
+		"sap.app": {
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "Analytical",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"number": "700",
+						"unit": "K",
+						"trend": "Up",
+						"state": "Success",
+						"target": {
+							"number": 100,
+							"unit": "K"
+						},
+						"deviation": {
+							"number": 34.7
+						},
+						"details": "Q1, 2018"
+					}
+				},
+				"title": "Users Devices",
+				"mainIndicator": {
+					"number": "{number}",
+					"state": "{state}",
+					"range": {
+						"Critical": [
+							0,
+							100
+						],
+						"Good": [
+							100,
+							1000
+						]
+					}
+				},
+				"details": "{details}"
+				
+			},
+			"content": {
+				"chartType": "Donut",
+				"legend": {
+					"visible": true,
+					"position": "bottom",
+					"alignment": "left"
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": true,
+						"showTotal": true
+					}
+				},
+				"title": {
+					"text": "Count by Period ",
+					"visible": true,
+					"alignment": "Left"
+				},
+				"measureAxis": "size",
+				"dimensionAxis": "color",
+				"data": {
+					"json": {
+						"milk": [
+							{
+								"Store Name": "Android",
+								"Revenue": 345292.06
+							},
+							{
+								"Store Name": "IOS",
+								"Revenue": 1564235.29
+							},
+							{
+								"Store Name": "Desktop",
+								"Revenue": 1085567.22
+							},
+							{
+								"Store Name": "Android",
+								"Revenue": 82922.07
+							},
+							{
+								"Store Name": "IOS",
+								"Revenue": 157913.07
+							},
+							{
+								"Store Name": "Desktop",
+								"Revenue": 245609.486884
+							}
+						]
+					},
+					"path": "/milk"
+				},
+				"dimensions": [
+					{
+						"label": "Store Name",
+						"value": "{Store Name}"
+					}
+				],
+				"measures": [
+					{
+						"label": "Revenue",
+						"value": "{Revenue}"
+					}
+				]
+			}
+		}
+	},
+	
+	"line": {
+		"sap.app": {
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "Analytical",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"number": "1200",
+						"unit": "K",
+						"trend": "Down",
+						"state": "Success",
+						"target": {
+							"number": 100,
+							"unit": "K"
+						},
+						"deviation": {
+							"number": 1000
+						},
+						"details": "Q1, 2018"
+					}
+				},
+				"title": "New Users",
+				"mainIndicator": {
+					"number": "{number}",
+					"state": "{state}",
+					"range": {
+						"Critical": [
+							0,
+							100
+						],
+						"Good": [
+							100,
+							1000
+						]
+					}
+				},
+				"details": "{details}"
+				
+			},
+			"content": {
+				"chartType": "bar",
+				"legend": {
+					"visible": true,
+					"position": "Bottom",
+					"alignment": "Left"
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": true
+					},
+					"categoryAxisText": {
+						"visible": false
+					},
+					"valueAxisText": {
+						"visible": false
+					}
+				},
+				"title": {
+					"text": "New Users Count",
+					"visible": true,
+					"alignment": "Left"
+				},
+				"measureAxis": "valueAxis",
+				"dimensionAxis": "categoryAxis",
+				"data": {
+					"json": {
+						"list": [
+							{
+								"Week": "CW14",
+								"NewUsers": 1000
+							},
+							{
+								"Week": "CW15",
+								"NewUsers": 2000
+							},
+							{
+								"Week": "CW16",
+								"NewUsers": 3000
+							},
+							{
+								"Week": "CW17",
+								"NewUsers": 4000
+							},
+							{
+								"Week": "CW18",
+								"NewUsers": 5000
+							},
+							{
+								"Week": "CW19",
+								"NewUsers": 6000
+							},
+							{
+								"Week": "CW20",
+								"NewUsers": 7000
+							}
+						]
+					},
+					"path": "/list"
+				},
+				"dimensions": [
+					{
+						"label": "Weeks",
+						"value": "{Week}"
+					}
+				],
+				"measures": [
+					{
+						"label": "NewUsers",
+						"value": "{NewUsers}"
+					}
+				]
+			}
+		}
+	},
+	"column2": {
+		"sap.app": {
+			"type": "card"
+		},
+		"sap.card": {
+			"type": "Analytical",
+			"header": {
+				"type": "Numeric",
+				"data": {
+					"json": {
+						"number": "6700",
+						"unit": "K",
+						"trend": "Up",
+						"state": "Success",
+						"target": {
+							"number": 100,
+							"unit": "K"
+						},
+						"deviation": {
+							"number": 34.7
+						},
+						"details": "Q1, 2018"
+					}
+				},
+				"title": "Geography Location of Users",
+				"mainIndicator": {
+					"number": "{number}",
+					"state": "{state}",
+					"range": {
+						"Critical": [
+							0,
+							100
+						],
+						"Good": [
+							100,
+							1000
+						]
+					}
+				},
+				"details": "{details}"
+			
+			},
+			"content": {
+				"chartType": "Column",
+				"legend": {
+					"visible": true,
+					"position": "Bottom",
+					"alignment": "Left"
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": true
+					},
+					"categoryAxisText": {
+						"visible": true
+					},
+					"valueAxisText": {
+						"visible": true
+					}
+				},
+				"title": {
+					"text": "Count by Geography",
+					"visible": true,
+					"alignment": "Left"
+				},
+				"measureAxis": "valueAxis",
+				"dimensionAxis": "categoryAxis",
+				"data": {
+					"json": {
+						"list": [{
+								"Country": "India",
+								"TotalUsers": 1000
+							},
+							{
+								"Country": "Sweden",
+								"TotalUsers": 2000
+							},
+							{
+								"Country": "US",
+								"TotalUsers": 3000
+							},
+							{
+								"Country": "UK",
+								"TotalUsers": 4000
+							}
+						]
+					},
+					"path": "/list"
+				},
+				"dimensions": [{
+					"label": "Country",
+					"value": "{Country}"
+				}],
+				"measures": [{
+						"label": "TotalUsers",
+						"value": "{TotalUsers}"
+					}
+				]
+			}
+		}
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,265 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	controllerName="ZDashBoard.controller.App" xmlns="sap.m"
+	xmlns:grid="sap.ui.layout.cssgrid" xmlns:commons="sap.suite.ui.commons"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.f" xmlns:form="sap.ui.layout.form" xmlns:card="sap.f.cards"
+	xmlns:tnt="sap.tnt" xmlns:micro="sap.suite.ui.microchart" xmlns:w="sap.ui.integration.widgets"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:ui="sap.ui.table" displayBlock="true" height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<ScrollContainer height="100%" width="100%" vertical="true">
+
+		<Panel class="uiBackGround ">
+
+			<HBox class="sapUiSmallMargin input">
+				<form:Form id="FormChangeColumn_threeGroups234" editable="true">
+					<form:title>
+						<core:Title text="Ericsson Fiori Usage" />
+					</form:title>
+					<form:layout>
+						<form:ColumnLayout columnsM="2" columnsL="3"
+							columnsXL="4" />
+					</form:layout>
+
+					<form:formContainers>
+
+						<form:FormContainer>
+							<form:FormElement label="Date">
+								<form:fields>
+									<Input id="calanderDate" type="Text" class="input"
+										placeholder="Please Select Date ..." showValueHelp="true"
+										valueHelpRequest="handleValueHelp" />
+
+								</form:fields>
+							</form:FormElement>
+						</form:FormContainer>
+
+
+						<form:FormContainer>
+							<form:FormElement label="Fiori Apps">
+								<form:fields>
+									<ComboBox placeholder="Please Select App" change="valueHelpChange" 
+									selectionChange="valueHelpScnChange"
+										items="{ path: 'oViewValueHelp>/', sorter: { path: 'text' 
+														} }">
+										<core:Item text="{oViewValueHelp>Apps}" key="{oViewValueHelp>TECH_SRV_NAME}" />
+									</ComboBox>
+								</form:fields>
+							</form:FormElement>
+						</form:FormContainer>
+
+					</form:formContainers>
+				</form:Form>
+			</HBox>
+		</Panel>
+
+		<Panel>
+			<f:GridContainer id="demoGrid" class="sapUiSmallMargin">
+
+				<w:Card manifest="{oViewActiveUsers>/column}">
+					<w:layoutData>
+						<f:GridContainerItemLayoutData rows="4"
+							columns="3" />
+					</w:layoutData>
+				</w:Card>
+
+
+				<w:Card manifest="{oViewDeviceType>/donut1}">
+					<w:layoutData>
+						<f:GridContainerItemLayoutData rows="4"
+							columns="3" />
+					</w:layoutData>
+				</w:Card>
+
+
+
+
+				<!-- <w:Card manifest="{manifests>/line}"> <w:layoutData> <f:GridContainerItemLayoutData 
+					rows="4" columns="3" /> </w:layoutData> </w:Card> -->
+
+				<!-- comment for tom demo-->
+			<!--	<f:Card>
+					<f:layoutData>
+						<f:GridContainerItemLayoutData
+							minRows="4" columns="3" />
+					</f:layoutData>
+					<f:content>
+
+						<commons:ChartContainer showFullScreen="true"
+							showPersonalization="false" autoAdjustHeight="true"
+							personalizationPress="attachPersonalizationPress" contentChange="attachContentChange"
+							title="Active Users Count">
+							<commons:content>
+								<commons:ChartContainerContent
+									icon="sap-icon://line-chart" title="Line Chart">
+									<commons:content>
+
+										<VBox class="sapUiSmallMargin" justifyContent="SpaceBetween">
+											<viz:VizFrame id="idVizFrameBar" vizType='bar'
+												selectData="selectLine" class="barChart">
+												<viz:dataset>
+													<viz.data:FlattenedDataset data="{Model>/Apps}">
+														<viz.data:dimensions>
+															<viz.data:DimensionDefinition
+																name="App" value="{App}" />
+														</viz.data:dimensions>
+														<viz.data:measures>
+															<viz.data:MeasureDefinition
+																name="Key" value="{Key}" />
+														</viz.data:measures>
+													</viz.data:FlattenedDataset>
+												</viz:dataset>
+												<viz:feeds>
+													<viz.feeds:FeedItem uid="categoryAxis"
+														type="Dimension" values="App" />
+													<viz.feeds:FeedItem id='valueAxisFeed'
+														uid="valueAxis" type="Measure" values="Key" />
+												</viz:feeds>
+											</viz:VizFrame>
+										</VBox>
+
+									</commons:content>
+								</commons:ChartContainerContent>
+							</commons:content>
+						</commons:ChartContainer>
+					</f:content>
+				</f:Card>-->
+		<!-- comment for tom demo-->
+				<!-- <w:Card manifest="{manifests>/column2}"> <w:layoutData> <f:GridContainerItemLayoutData 
+					rows="4" columns="3" /> </w:layoutData> </w:Card> -->
+
+	<!-- comment for tom demo-->
+			<!--	<f:Card>
+					<f:layoutData>
+						<f:GridContainerItemLayoutData
+							minRows="6" columns="3" />
+					</f:layoutData>
+					<f:content>
+						<commons:ChartContainer showFullScreen="true"
+							showPersonalization="false" autoAdjustHeight="true"
+							personalizationPress="attachPersonalizationPress" contentChange="attachContentChange"
+							title="User Devices">
+							<commons:content>
+								<commons:ChartContainerContent
+									icon="sap-icon://line-chart" title="Line Chart">
+									<commons:content>
+									
+									 <viz:Popover ></viz:Popover>
+									
+											<viz:VizFrame id="oVizFramePie" busy="false"
+												busyIndicatorDelay="1000" visible="true"
+												uiConfig="{ 'applicationSet': 'fiori' }" vizType="pie"
+												class="pieChart" legendVisible="true">
+												
+												 <viz:dataset>
+											    <viz.data:FlattenedDataset data="{Model>/book}">
+											      <viz.data:dimensions>
+											       <viz.data:DimensionDefinition name="Country"
+											        value="{Country}" />
+											      </viz.data:dimensions>
+											      <viz.data:measures>
+											       <viz.data:MeasureDefinition name="population"
+											        value="{population}" />
+											      </viz.data:measures>
+											     </viz.data:FlattenedDataset>
+											    </viz:dataset>
+											    <viz:feeds>
+											     <viz.feeds:FeedItem uid="size" type="Measure"
+											      values="population" />
+											     <viz.feeds:FeedItem uid="color" type="Dimension"
+											      values="Country" />
+											    </viz:feeds>
+												
+												
+											</viz:VizFrame>
+									</commons:content>
+								</commons:ChartContainerContent>
+							</commons:content>
+						</commons:ChartContainer>
+					</f:content>
+				</f:Card>-->
+				
+					<!-- comment for tom demo-->
+
+
+				<!-- <f:items> <f:Card> <f:layoutData> <f:GridContainerItemLayoutData 
+					minRows="5" columns="3" /> </f:layoutData> <f:content> <VBox class="sapUiSmallMargin" 
+					justifyContent="SpaceBetween"> <Table> <columns> <Column demandPopin="true" 
+					minScreenWidth="Tablet"> <Text text="Response Time" /> </Column> </columns> 
+					<items> <ColumnListItem> <cells> <FlexBox renderType="Bare"> <micro:ComparisonMicroChart 
+					scale="ms" app:name="comparison" press="press" isResponsive="true"> <micro:data> 
+					<micro:ComparisonMicroChartData title="PO Aproval" value="30" color="Critical" 
+					displayValue="30" /> </micro:data> </micro:ComparisonMicroChart> </FlexBox> 
+					</cells> </ColumnListItem> <ColumnListItem> <cells> <FlexBox renderType="Bare"> 
+					<micro:ComparisonMicroChart scale="ms" app:name="comparison" press="press" 
+					isResponsive="true"> <micro:data> <micro:ComparisonMicroChartData title="Shopping 
+					Cart Approval" value="60" color="Error" displayValue="60" /> </micro:data> 
+					</micro:ComparisonMicroChart> </FlexBox> </cells> </ColumnListItem> <ColumnListItem> 
+					<cells> <FlexBox renderType="Bare"> <micro:ComparisonMicroChart scale="ms" 
+					app:name="comparison" press="press" isResponsive="true"> <micro:data> <micro:ComparisonMicroChartData 
+					title="Goods Receipt Approval" value="10" color="Good" displayValue="10" 
+					/> </micro:data> </micro:ComparisonMicroChart> </FlexBox> </cells> </ColumnListItem> 
+					</items> </Table> </VBox> -->
+
+
+				<!-- <ui:Table rows="{Model>/ResponsTime}" title="Response Times" visibleRowCount="7" 
+					paste="onPaste"> <ui:columns> <ui:Column > <ui:template> <micro:ComparisonMicroChart 
+					scale="M" app:name="comparison" press="press" isResponsive="true"> <micro:data> 
+					<micro:ComparisonMicroChartData title="PO Aproval" value="{Model>value}" 
+					color="{Model>color}" displayValue="{Model>DisplayValue}" /> </micro:data> 
+					</micro:ComparisonMicroChart> </ui:template> </ui:Column> </ui:columns> </ui:Table> -->
+
+				<!-- </f:content> </f:Card> <f:Card> <f:layoutData> <f:GridContainerItemLayoutData 
+					minRows="4" columns="4" /> </f:layoutData> <f:content> <VBox class="sapUiSmallMargin" 
+					justifyContent="SpaceBetween"> <List id="ProductList" items="{Model>/ProductCollection}" 
+					includeItemInSelection="true"> <headerToolbar> <Toolbar> <content> <Title 
+					text="Number of Apps Downloaded" level="H2" /> <ToolbarSpacer /> <Label text="" 
+					labelFor="state" /> </content> </Toolbar> </headerToolbar> <StandardListItem 
+					title="{Model>Name}" description="{Model>ProductId}" counter="{Model>Quantity}" 
+					press="handlePress" detailPress="handleDetailPress" /> </List> </VBox> </f:content> 
+					</f:Card> </f:items> -->
+
+
+	<!-- comment for tom demo-->
+			<!--	<f:Card>
+					<f:layoutData>
+						<f:GridContainerItemLayoutData
+							minRows="5" columns="2" />
+					</f:layoutData>
+					<f:content>
+
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+							header="Number of App's download" subheader="" press="press">
+							<TileContent unit="" footer="" class="tileLayout">
+								<NumericContent value="1762" icon="sap-icon://line-charts"
+									withMargin="false" />
+							</TileContent>
+						</GenericTile>
+					</f:content>
+				</f:Card>
+
+
+				<f:Card>
+					<f:layoutData>
+						<f:GridContainerItemLayoutData
+							minRows="5" columns="2" />
+					</f:layoutData>
+					<f:content>
+
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+							header="Response Time" subheader="" press="press">
+							<TileContent unit="" footer="" class="tileLayout">
+								<NumericContent value="1200" icon="sap-icon://line-charts"
+									withMargin="false" />
+							</TileContent>
+						</GenericTile>
+					</f:content>
+				</f:Card>-->
+					<!-- comment for tom demo-->
+
+
+			</f:GridContainer>
+		</Panel>
+	</ScrollContainer>
+</mvc:View>

@@ -1,0 +1,179 @@
+{
+	"Data":{
+		"Username":""
+	},
+	
+	"Apps": [{
+		"App": "App A",
+		"Key": "01"
+	}, {
+		"App": "App B",
+		"Key": "02"
+	}, {
+		"App": "App C",
+		"Key": "03"
+	}],
+	"Cars": [{
+		"Brand": "Brand A",
+		"Value": "2000"
+	}, {
+		"Brand": "Brand B",
+		"Value": "4000"
+	}, {
+		"Brand": "Brand C",
+		"Value": "6000"
+	}],
+	
+	"ProductCollection":[
+	{
+		"Name": "Approve Purchase Order",
+		"ProductId": "Ericsson Buyer",
+		"Quantity":600
+	},
+	{
+		"Name": "Approve Shopping Cart",
+		"ProductId": "Ericsson Buyer",
+		"Quantity":800
+	},
+	{
+		"Name": "Confirm Receipt of Goods",
+		"ProductId": "Ericsson Buyer",
+		"Quantity":9000
+	},
+	{
+		"Name": "Track Shopping Cart",
+		"ProductId": "Ericsson Buyer",
+		"Quantity":1000
+	}
+	],
+	
+	"FioriApps":[
+	{
+		"Value": "Approve Purchase Order",
+		"Key": "APR"
+	},
+	{
+		"Value": "Approve Shopping Cart",
+		"Key": "ASC"
+	},
+	{
+		"Value": "Confirm Receipt of Goods",
+		"Key": "CRG"
+	},
+	{
+		"Value": "Track Shopping Cart",
+		"Key": "TSC"
+	}
+	],
+	
+	"ResponsTime":[
+	{
+		"value": "Approve Purchase Order",
+		"color": "Critical",
+		"DisplayValue":30
+	},
+	{
+		"value": "Approve Purchase Order",
+		"color": "Good",
+		"DisplayValue":10
+	},
+	{
+		"value": "Approve Purchase Order",
+		"color": "Error",
+		"DisplayValue":40
+	},
+	{
+		"value": "Approve Purchase Order",
+		"color": "Good",
+		"DisplayValue":12
+	}
+	],
+
+	"milk": [{
+		"Revenue": "Brand A",
+		"Cost": "200",
+		"Consumption": "225",
+		"Store Name":"store A",
+		"Country":"Country A"
+		
+	}, {
+		"Revenue": "Brand B",
+		"Cost": "400",
+		"Consumption": "425",
+		"Store Name":"store B",
+		"Country":"Country B"
+	}, {
+		"Revenue": "Brand C",
+		"Cost": "600",
+		"Consumption": "625",
+		"Store Name":"store C",
+		"Country":"Country C"
+	}],
+	
+	"items": [{
+		"Department": "R & D",
+		"EmployeeCount": "20"
+	}, {
+		"Department": "Syngenta",
+		"EmployeeCount": "30"
+	}, {
+		"Department": "Volvo",
+		"EmployeeCount": "35"
+	}, {
+		"Department": "NIKE",
+		"EmployeeCount": "60"
+	}, {
+		"Department": "ADIDAS",
+		"EmployeeCount": "70"
+	}],
+	
+	"aData":[{
+        "Country": "AR",
+        "Time": "201201",
+        "DSO": "50.29",
+        "DSO1": "50.29",
+        "DSO2": "50.29",
+        "DSO3": "50.29"
+    }, {
+        "Country": "BR",
+        "Time": "201201",
+        "DSO": "60.81",
+        "DSO1": "60.29",
+        "DSO2": "60.29",
+        "DSO3": "60.29"
+    }, {
+        "Country": "CN",
+        "Time": "201201",
+        "DSO": "52",
+        "DSO1": "50.29",
+        "DSO2": "50.29",
+        "DSO3": "50.29"
+    }, {
+        "Country": "VE",
+        "Time": "201204",
+        "DSO": "33.85",
+        "DSO1": "50.29",
+        "DSO2": "50.29",
+        "DSO3": "50.29"
+    }],
+    
+    "book":[{
+       "Country": "Canada",
+       "population": 34789000
+      }, {
+       "Country": "China",
+       "population": 1339724852
+      }, {
+       "Country": "France",
+       "population": 65350000
+      }, {
+       "Country": "Russia",
+       "population": 817944333
+      }, {
+       "Country": "India",
+       "population": 1210193422
+      }, {
+       "Country": "Nepal",
+       "population": 31349
+      }]
+}
